@@ -1,1 +1,11 @@
 //LaTeX dokumentáció
+
+T=\sum_{i=1}^{N}1  \\
+\exists \  j\in \left [ 1..M \right ] : P_{i,j}=Max\left(Matr_{\left [ 1..N \right ], j}\right) \\\\
+\wedge Tki\subseteq \left [1..N \right ] \\
+\wedge \forall \  i\in \left[1..T \right ]:Db(Tki_{i})\geqslant 1 \\
+\wedge \forall \ i\in \left[1..(T-1) \right ]:Tki_{i}\ " > "\ Tki_{i+1} \\\\
+Def: Max(Matr_{X,y})=\left (k\mid \exists \ i\in X: k= Matr_{i,y} \wedge \forall \ i \in X: k \geqslant Matr_{i,y} \right ),\\
+Db(x)=\sum_{j=1}^{M}1,  \\
+P_{x,j}=Max\left(Matr_{\left [ 1..N \right ],j}\right) \\\\
+x\ " > "\ y \Leftrightarrow \left \{  Db(x) \neq Db(y)\ ?\  Db(x) > Db(y) : x<y \right \}
