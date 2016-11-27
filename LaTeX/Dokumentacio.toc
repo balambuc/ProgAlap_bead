@@ -4,9 +4,10 @@
 \contentsline {subsection}{\numberline {1.3}Haszn\IeC {\'a}lat}{2}
 \contentsline {subsubsection}{\numberline {1.3.1}A program ind\IeC {\'\i }t\IeC {\'a}sa}{2}
 \contentsline {subsubsection}{\numberline {1.3.2}A program bemenete}{2}
-\contentsline {subsubsection}{\numberline {1.3.3}A program kimenete}{2}
+\contentsline {subsubsection}{\numberline {1.3.3}A program kimenete}{3}
 \contentsline {subsubsection}{\numberline {1.3.4}Minta bemenet \IeC {\'e}s kimenet}{3}
 \contentsline {subsubsection}{\numberline {1.3.5}Hibalehet\IeC {\H o}s\IeC {\'e}gek}{3}
+\contentsline {subparagraph}{Mintafut\IeC {\'a}s hib\IeC {\'a}s bemeneti adatok eset\IeC {\'e}n:}{3}
 \contentsline {section}{\numberline {2}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{4}
 \contentsline {subsection}{\numberline {2.1}Feladat}{4}
 \contentsline {subsection}{\numberline {2.2}Specifik\IeC {\'a}ci\IeC {\'o}}{4}

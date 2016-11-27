@@ -1,9 +1,13 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+
+\usepackage[margin=4cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{float}
+\usepackage{listings}
 
 
 \title{”Programozási alapismeretek”\\ beadandó feladat:\\ ”ProgAlap beadandó” téma 1. feladat}
@@ -34,26 +38,52 @@
       IBM PC, exe futtatására alkalmas, 32-bites operációs rendszer (pl. Windows 10). Nem igényel egeret.
     \subsection{Használat}
       \subsubsection{A program indítása}
-        A program az VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe néven található a tömörített állományban. A VY9NJN.exe fájl kiválasztásával indítható.
+        A program a \textbf{VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe} néven található a tömörített állományban. A \textbf{VY9NJN.exe} fájl kiválasztásával indítható.
       \subsubsection{A program bemenete}
         A program az adatokat a billentyűzetről olvassa be a következő sorrendben:
-        \\
-        \begin{table}[h!]
+        \begin{table}[H]
           \centering
           \caption{Bemenet}
           \label{tab:table1}
-          \begin{tabular}{ccc}
+          \begin{tabular}{ccl}
             \toprule
             \# & Adat & Magyarázat \\
             \midrule
-            1 & N & Tanulók száma $(1 \leqslant N \leqslant 100)$ \\
-            2 & M & Versenyek száma $(1 \leqslant M \leqslant 100)$ \\
-            3 & Min_1 & Az 1. verseny minimum ponthatára $(0 \leqslant Min_1 \leqslant 50)$ \\
-            4 & Min_2 & A 2. verseny minimum ponthatára $(0 \leqslant Min_2 \leqslant 50)$ \\
+            $1$ & $N$ & Tanulók száma $(1 \leqslant N \leqslant 100)$ \\
+            $2$ & $M$ & Versenyek száma $(1 \leqslant M \leqslant 100)$ \\
+            $3$ & $Min_1$ & Az 1. verseny minimum ponthatára $(0 \leqslant Min_1 \leqslant 50)$ \\
+            $4$ & $Min_2$ & A 2. verseny minimum ponthatára $(0 \leqslant Min_2 \leqslant 50)$ \\
             . \\
             . \\
             . \\
-            M+2 & Min_M & Az M. verseny minimum ponthatára $(0 \leqslant Min_M \leqslant 50)$ \\
+            $M+2$ & $Min_M$ & Az M. verseny minimum ponthatára $(0 \leqslant Min_M \leqslant 50)$ \\
+            $M+2+1$ & $Para_1$ & Az 1. verseny paraméterei (lásd: table2) \\
+            $M+2+2$ & $Para_2$ & A 2. verseny paraméterei (lásd: table2) \\
+            . \\
+            . \\
+            . \\
+            $M+2+M$ & $Para_M$ & Az M. verseny paraméterei (lásd: table2) \\
+            \bottomrule
+          \end{tabular}
+        \end{table}
+        \begin{table}[H]
+          \centering
+          \caption{Egy adott verseny paraméterei}
+          \label{tab:table2}
+          \begin{tabular}{ccl}
+            \toprule
+            \# & Adat & Magyarázat \\
+            \midrule
+            $1$ & $Ind_i$ & A versenyen indulók száma $(1 \leqslant Ind_i \leqslant N)$ \\
+            $2$ & $S_{i,1}$ & Az első tanuló sorszáma $(1 \leqslant S_{i,1} \leqslant N)$ \\
+            $3$ & $P_{i,1}$ & Az első tanuló által elért pont $(1 \leqslant P_{i,1} \leqslant 100)$ \\
+            $4$ & $S_{i,2}$ & A második tanuló sorszáma $(1 \leqslant S_{i,2} \leqslant N)$ \\
+            $5$ & $P_{i,2}$ & A második tanuló által elért pont $(1 \leqslant P_{i,2} \leqslant 100)$ \\
+            . \\
+            . \\
+            . \\
+            $2*Ind_i$ & $S_{i,Ind_i}$ & Az $Ind_i$. tanuló sorszáma $(1 \leqslant S_{i,1} \leqslant N)$ \\
+            $2*Ind_i+1$ & $P_{i,Ind_i}$ & Az $Ind_i$. tanuló által elért pont $(1 \leqslant P_{i,1} \leqslant 100)$ \\
             \bottomrule
           \end{tabular}
         \end{table}
@@ -65,20 +95,43 @@
       \subsubsection{Minta bemenet és kimenet}
       \subsubsection{Hibalehetőségek}
         Az egyes bemeneti adatokat a fenti mintának megfelelően kell megadni.
-        Hiba, ha a mérések száma nem egész szám, vagy nem esik a 2..10 000 intervallumba;
-        vagy valamely magassági érték nem szám, vagy nem esik a 0..9 000 intervallumba.
-        Hiba esetén a program azzal jelzi a hibát, hogy újrakérdezi azt.
+        Hiba, ha a bármely bemenő adat nem egész szám, nem esik az adott intervallumba,
+        vagy ha nem szám.
+        Hiba esetén a program azzal jelzi a hibát, hogy újrakérdezi az adott adatot.
+        \\
+        \subparagraph{Mintafutás hibás bemeneti adatok esetén:}
+
 
   \newpage
 
   \section{Fejlesztői dokumentáció}
     \subsection{Feladat}
-      Egy iskolában egyéni és összetett tanulmányi versenyt tartottak. A versenyekben összesen N tanuló vett részt. A versenyek száma M. Ismerjük versenyenként az induló tanulókat és elért pontszámukat. Az összetett versenyben csak azon tanulók eredményét értékelik, akik az összes egyéni versenyen indultak és elérték a versenyenként adott minimális pontszámot.
-      \\
-      \\ Készíts programot, amely megadja az egyéni versenyek győzteseinek rangsorát!
+    Egy iskolában egyéni és összetett tanulmányi versenyt tartottak.
+    A versenyekben összesen N tanuló vett részt. A versenyek száma M.
+    Ismerjük versenyenként az induló tanulókat és elért pontszámukat.
+    Az összetett versenyben csak azon tanulók eredményét értékelik,
+    akik az összes egyéni versenyen indultak és elérték a versenyenként adott minimális pontszámot.
+    \\
+    \\ Készíts programot, amely megadja az egyéni versenyek győzteseinek rangsorát!
     \subsection{Specifikáció}
     \subsection{Fejlesztői környezet}
+    IBM PC, exe futtatására alkalmas operációs rendszer (pl. Windows 10). \\
+    mingw32-g++.exe c++ fordítóprogram (v4.9.2), Code::Blocks (v16.01) fejlesztői környezet.
     \subsection{Forráskód}
+    A teljes fejlesztői anyag –kicsomagolás után– az \textbf{VY9NJN} nevű könyvtárban található meg.
+    A fejlesztés során használt könyvtár-struktúra:
+    \begin{table}[H]
+      \centering
+      \caption{könyvtár-struktúra}
+      \label{tab:table3}
+      \begin{tabular}{ll}
+        \toprule
+        Állomány & Magyarázat \\
+        \midrule
+        VY9NJN\textbackslash main.cpp & C++ forráskód \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
     \subsection{Megoldás}
       \subsubsection{Programparaméterek}
       \subsubsection{Programfelépítés}
