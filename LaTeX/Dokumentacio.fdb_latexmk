@@ -1,8 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1480239853 "Dokumentacio.tex" "Dokumentacio.pdf" "Dokumentacio" 1480239854
-  "Dokumentacio.aux" 1480239854 8 a94a2480d3289e625eea47cd1b285758 ""
-  "Dokumentacio.tex" 1480239847 501 6c83fd63cb7eeca08eebb6e1864ed4aa ""
+["pdflatex"] 1480244948 "Dokumentacio.tex" "Dokumentacio.pdf" "Dokumentacio" 1480244951
+  "Dokumentacio.aux" 1480244950 2386 3f24d0ae1aeec9985314151a6c4122c6 ""
+  "Dokumentacio.tex" 1480244834 2475 9cec8566e76e7cc5ce05d23eb8675321 ""
+  "Dokumentacio.toc" 1480244950 1946 598ccc86defefb17fa455bc73a9dc1ec ""
   "c:/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1480200406 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480198765 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480198765 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1480198765 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1480198765 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1480198765 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -13,6 +16,8 @@
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1480198765 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1480198765 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1480198765 1120 8b7d695260f3cff42e636090a8002094 ""
+  "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1480197197 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1480197197 32080 340ef9bf63678554ee606688e7b5339d ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480197197 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1480197197 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1480197197 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
@@ -28,6 +33,7 @@
   "c:/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1480207386 3870028 68e2f4a6cd2b9269f4879900185b3992 ""
   "c:/texlive/2016/texmf.cnf" 1480206845 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   (generated)
-  "Dokumentacio.pdf"
-  "Dokumentacio.log"
   "Dokumentacio.aux"
+  "Dokumentacio.log"
+  "Dokumentacio.pdf"
+  "Dokumentacio.toc"

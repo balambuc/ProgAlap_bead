@@ -1,0 +1,24 @@
+\contentsline {section}{\numberline {1}Felhaszn\IeC {\'a}l\IeC {\'o}i dokument\IeC {\'a}ci\IeC {\'o}}{2}
+\contentsline {subsection}{\numberline {1.1}Feladat}{2}
+\contentsline {subsection}{\numberline {1.2}Fut\IeC {\'a}si k\IeC {\"o}rnyezet}{2}
+\contentsline {subsection}{\numberline {1.3}Haszn\IeC {\'a}lat}{2}
+\contentsline {subsubsection}{\numberline {1.3.1}A program ind\IeC {\'\i }t\IeC {\'a}sa}{2}
+\contentsline {subsubsection}{\numberline {1.3.2}A program bemenete}{2}
+\contentsline {subsubsection}{\numberline {1.3.3}A program kimenete}{2}
+\contentsline {subsubsection}{\numberline {1.3.4}Minta bemenet \IeC {\'e}s kimenet}{2}
+\contentsline {subsubsection}{\numberline {1.3.5}Hibalehet\IeC {\H o}s\IeC {\'e}gek}{2}
+\contentsline {section}{\numberline {2}Fejleszt\IeC {\H o}i dokument\IeC {\'a}ci\IeC {\'o}}{3}
+\contentsline {subsection}{\numberline {2.1}Feladat}{3}
+\contentsline {subsection}{\numberline {2.2}Specifik\IeC {\'a}ci\IeC {\'o}}{3}
+\contentsline {subsection}{\numberline {2.3}Fejleszt\IeC {\H o}i k\IeC {\"o}rnyezet}{3}
+\contentsline {subsection}{\numberline {2.4}Forr\IeC {\'a}sk\IeC {\'o}d}{3}
+\contentsline {subsection}{\numberline {2.5}Megold\IeC {\'a}s}{3}
+\contentsline {subsubsection}{\numberline {2.5.1}Programparam\IeC {\'e}terek}{3}
+\contentsline {subsubsection}{\numberline {2.5.2}Programfel\IeC {\'e}p\IeC {\'\i }t\IeC {\'e}s}{3}
+\contentsline {subsubsection}{\numberline {2.5.3}F\IeC {\"u}ggv\IeC {\'e}nystrukt\IeC {\'u}ra}{3}
+\contentsline {subsubsection}{\numberline {2.5.4}Algoritmus}{3}
+\contentsline {subsubsection}{\numberline {2.5.5}A k\IeC {\'o}d}{3}
+\contentsline {subsection}{\numberline {2.6}Tesztel\IeC {\'e}s}{3}
+\contentsline {subsubsection}{\numberline {2.6.1}\IeC {\'E}rv\IeC {\'e}nyes tesztesetek}{3}
+\contentsline {subsubsection}{\numberline {2.6.2}\IeC {\'E}rv\IeC {\'e}nytelen tesztesetek}{3}
+\contentsline {subsection}{\numberline {2.7}Fejleszt\IeC {\'e}si lehet\IeC {\H o}s\IeC {\'e}gek}{3}
