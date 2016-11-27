@@ -1,5 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 
 
 \title{”Programozási alapismeretek”\\ beadandó feladat:\\ ”ProgAlap beadandó” téma 1. feladat}
@@ -33,6 +37,26 @@
         A program az VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe néven található a tömörített állományban. A VY9NJN.exe fájl kiválasztásával indítható.
       \subsubsection{A program bemenete}
         A program az adatokat a billentyűzetről olvassa be a következő sorrendben:
+        \\
+        \begin{table}[h!]
+          \centering
+          \caption{Bemenet}
+          \label{tab:table1}
+          \begin{tabular}{ccc}
+            \toprule
+            \# & Adat & Magyarázat \\
+            \midrule
+            1 & N & Tanulók száma $(1 \leqslant N \leqslant 100)$ \\
+            2 & M & Versenyek száma $(1 \leqslant M \leqslant 100)$ \\
+            3 & Min_1 & Az 1. verseny minimum ponthatára $(0 \leqslant Min_1 \leqslant 50)$ \\
+            4 & Min_2 & A 2. verseny minimum ponthatára $(0 \leqslant Min_2 \leqslant 50)$ \\
+            . \\
+            . \\
+            . \\
+            M+2 & Min_M & Az M. verseny minimum ponthatára $(0 \leqslant Min_M \leqslant 50)$ \\
+            \bottomrule
+          \end{tabular}
+        \end{table}
       \subsubsection{A program kimenete}
         A program kiírja az egyéni versenyek győzteseinek rangsorát.
         A kimenet első sorába az egyéni győzelmet elért tanulók számát,
