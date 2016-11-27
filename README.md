@@ -23,14 +23,17 @@ szerint növekvő sorrendben!
 
 ##Példa
 
-Bemenet                     Kimenet
-5 3                         3 4 2 5
-10 10 10
-3 1 10 2 30 3 10
-2 4 50 1 30
+Bemenet   
+5 3   
+10 10 10  
+3 1 10 2 30 3 10  
+2 4 50 1 30  
 5 1 10 2 20 3 30 4 50 5 50
+
+Kimenet  
+3 4 2 5
 
 ##Korlátok
 
-Időlimit: 0.1 mp.
+Időlimit: 0.1 mp.  
 Memórialimit: 32 MB
