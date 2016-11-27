@@ -19,16 +19,32 @@
 
   \section{Felhasználói dokumentáció}
     \subsection{Feladat}
-      Egy iskolában egyéni és összetett tanulmányi versenyt tartottak. A versenyekben összesen N tanuló vett részt. A versenyek száma M. Ismerjük versenyenként az induló tanulókat és elért pontszámukat. Az összetett versenyben csak azon tanulók eredményét értékelik, akik az összes egyéni versenyen indultak és elérték a versenyenként adott minimális pontszámot.
+      Egy iskolában egyéni és összetett tanulmányi versenyt tartottak.
+      A versenyekben összesen N tanuló vett részt. A versenyek száma M.
+      Ismerjük versenyenként az induló tanulókat és elért pontszámukat.
+      Az összetett versenyben csak azon tanulók eredményét értékelik,
+      akik az összes egyéni versenyen indultak és elérték a versenyenként adott minimális pontszámot.
       \\
       \\ Készíts programot, amely megadja az egyéni versenyek győzteseinek rangsorát!
     \subsection{Futási környezet}
+      IBM PC, exe futtatására alkalmas, 32-bites operációs rendszer (pl. Windows 10). Nem igényel egeret.
     \subsection{Használat}
       \subsubsection{A program indítása}
+        A program az VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe néven található a tömörített állományban. A VY9NJN.exe fájl kiválasztásával indítható.
       \subsubsection{A program bemenete}
+        A program az adatokat a billentyűzetről olvassa be a következő sorrendben:
       \subsubsection{A program kimenete}
+        A program kiírja az egyéni versenyek győzteseinek rangsorát.
+        A kimenet első sorába az egyéni győzelmet elért tanulók számát,
+        amelyet győztesek sorszáma követi, győzelmek száma szerint csökkenő,
+        azon belül sorszám szerint növekvő sorrendben.
       \subsubsection{Minta bemenet és kimenet}
       \subsubsection{Hibalehetőségek}
+        Az egyes bemeneti adatokat a fenti mintának megfelelően kell megadni.
+        Hiba, ha a mérések száma nem egész szám, vagy nem esik a 2..10 000 intervallumba;
+        vagy valamely magassági érték nem szám, vagy nem esik a 0..9 000 intervallumba.
+        Hiba esetén a program azzal jelzi a hibát, hogy újrakérdezi azt.
+
   \newpage
 
   \section{Fejlesztői dokumentáció}
