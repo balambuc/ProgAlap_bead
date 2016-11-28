@@ -3,7 +3,7 @@
 \usepackage[margin=4cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
-\usepackage{amsmath}
+\usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{float}
@@ -114,6 +114,40 @@
     \\
     \\ Készíts programot, amely megadja az egyéni versenyek győzteseinek rangsorát!
     \subsection{Specifikáció}
+    \begin{align*}
+      \mathbf{Be:}\, &N \in \mathbb{N} \\
+      &M \in \mathbb{N} \\
+      &Min \in \mathbb{N}^M \\
+      &P \in \mathbb{N}^{NxM}
+    \end{align*}
+    \begin{align*}
+      \mathbf{Ki:}\, &T \in \mathbb{N} \\
+      &Nyert \in \mathbb{N}^T
+    \end{align*}
+    \begin{align*}
+      \mathbf{EF:}\, &N \in \left [ 1 .. 100 \right ] \\
+      &M \in \left [ 1 .. 100 \right ] \\
+      &\forall i \in \left [ 1 .. M \right ] : Min_i \in \left [ 0 .. 50 \right ]
+    \end{align*}
+    \begin{align*}
+      \mathbf{UF:}\, &\qquad T=\sum_{i=1}^{N}1 \, \wedge \\
+      &\exists j \in \left [ 1 .. M \right ] : P_{i,j}=Max \left ( Matr_{\left [ 1 .. N \right ], j} \right ) \\
+      \\
+      &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
+      &\forall i \in \left [ 1 .. T \right ] : Db(Nyert_i) \geqslant 1 \, \wedge \\
+      &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, `>` \, Nyert_{i+1}
+    \end{align*}
+    \begin{align*}
+      \mathbf{Def:}\, &Max(Matr_{X,y})=\left (k\mid \exists \ i\in X: k= Matr_{i,y} \wedge \forall \ i \in X: k \geqslant Matr_{i,y} \right ) , \\
+      &\qquad Db(x)=\sum_{j=1}^{M}1 ,  \\
+      &P_{x,j}=Max\left(Matr_{\left [ 1..N \right ],j}\right) \\
+      &x \, `>` \, y \Leftrightarrow \left\{
+                \begin{array}{ll}
+                  Db(x) \neq Db(y) : Db(x) > Db(y)\\
+                  Db(x) = Db(y) : x < y\\
+                \end{array}
+              \right.
+    \end{align*}
     \subsection{Fejlesztői környezet}
     IBM PC, exe futtatására alkalmas operációs rendszer (pl. Windows 10). \\
     mingw32-g++.exe c++ fordítóprogram (v4.9.2), Code::Blocks (v16.01) fejlesztői környezet.
@@ -129,6 +163,8 @@
         Állomány & Magyarázat \\
         \midrule
         VY9NJN\textbackslash main.cpp & C++ forráskód \\
+        VY9NJN\textbackslash LaTeX\textbackslash Dokumentacio.tex & Ezen dokumentáció LaTeX kódja \\
+        VY9NJN\textbackslash Dokumentacio.pdf & Ez a fájl \\
         \bottomrule
       \end{tabular}
     \end{table}
