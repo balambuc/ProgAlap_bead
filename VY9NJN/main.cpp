@@ -91,7 +91,7 @@ void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET])
 
 void megold(int N, int M, int &T, int P[MERET][MERET], int Nyert[MERET], int db[MERET])
 {
-    //megszamolás
+    //megszamolas
     T=0;
     for(int i=0; i<N; i++)
         if(Db(i,N,M,P,db)>=1)
@@ -101,8 +101,8 @@ void megold(int N, int M, int &T, int P[MERET][MERET], int Nyert[MERET], int db[
     for(int i=0; i<N; i++)
         Nyert[i]=i+1;
 
-    //buborékrendezés
-    //Egyszerre rendezi a nyert és a db halmazokat, így anyert halmazokban a tanulók indexei is "helyükre kerülnek"
+    //buborekrendezes
+    //Egyszerre rendezi a nyert es a db halmazokat, igy a nyert halmazban a tanulok indexei is "helyukre kerulnek"
     for(int i=N-1; i>0; i--)
         for(int j=0; j<i; j++)
             if(db[j]<db[j+1]) {
