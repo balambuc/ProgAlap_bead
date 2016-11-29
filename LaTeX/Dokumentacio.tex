@@ -11,6 +11,7 @@
 \usepackage{color}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{struktex}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -244,8 +245,19 @@
           \draw [arrow] (db) -- (max);
         \end{tikzpicture}
       \subsubsection{Algoritmus}
+        \subparagraph{Főprogram: }
+        \begin{center}
+          \input{./structs/fo}
+        \end{center}
+        \subparagraph{Alprogramok: }
+        \begin{center}
+          \input{./structs/beolv}
+          \input{./structs/megold}
+          \input{./structs/Db}
+          \input{./structs/Max}
+        \end{center}
       \subsubsection{A kód}
-        \lstinputlisting[language=C]{../VY9NJN/main.cpp}
+        \lstinputlisting[language=C++]{../VY9NJN/main.cpp}
     \subsection{Tesztelés}
       \subsubsection{Érvényes tesztesetek}
       \subsubsection{Érvénytelen tesztesetek}

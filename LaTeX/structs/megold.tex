@@ -1,0 +1,25 @@
+\begin{struktogramm}(152,90)[{megold(N[Egész],\ M[Egész],\ T[Egész],\ P[NxM\ Mátrix],\ Nyert[T\ Vektor])}]
+  \assign{\(T:=0\)}
+  \while{\(i:=1..N\)}
+   \ifthenelse{6}{6}{\(Db(i,\ N,\ M,\ P,\ db)\ >=\ 1\)}{i}{n}
+    \assign{\(T:=T+1\)}
+   \change
+   \ifend
+  \whileend
+  \while{\(i:=1..N\)}
+   \assign{\(Nyert[i]:=i\)}
+  \whileend
+  \while{\(i:=N..2\ (-1)es\acute evel\)}
+   \while{\(j:=1..i\)}
+    \ifthenelse{6}{6}{\(db[j]\ <\ db[j+1]\)}{i}{n}
+     \assign{\(S:=db[j]\)}
+     \assign{\(db[j]:=db[j+1]\)}
+     \assign{\(db[j+1]:=S\)}
+     \assign{\(S:=Nyert[j]\)}
+     \assign{\(Nyert[j]:=Nyert[j+1]\)}
+     \assign{\(Nyert[j+1]:=S\)}
+    \change
+    \ifend
+   \whileend
+  \whileend
+\end{struktogramm}
