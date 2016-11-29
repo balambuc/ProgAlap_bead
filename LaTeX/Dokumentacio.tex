@@ -166,17 +166,17 @@
       &\forall i \in \left [ 1 .. M \right ] : Min_i \in \left [ 0 .. 50 \right ]
     \end{align*}
     \begin{align*}
-      \mathbf{UF:}\, & T=\sum_{i=1}^{N}1 \, \wedge \\
+      \mathbf{UF:}\, &T=\sum_{i=1}^{N}1 \, \wedge \\
       &\quad Db(i) \geqslant 1 \\
       &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
       &\forall i \in \left [ 1 .. T \right ] : Db(Nyert_i) \geqslant 1 \, \wedge \\
-      &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, `>` \, Nyert_{i+1}
+      &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, \gtrdot \, Nyert_{i+1}
     \end{align*}
     \begin{align*}
       \mathbf{Def:}\, &\quad Db(x)=\sum_{j=1}^{M}1   \\
       &P_{x,j}=Max\left(P_{\left [ 1..N \right ],j}\right) \\
       \\
-      &x \, `>` \, y \Leftrightarrow \left\{
+      &x \, \gtrdot \, y \Leftrightarrow \left\{
                 \begin{array}{ll}
                   Db(x) \neq Db(y) : Db(x) > Db(y)\\
                   Db(x) = Db(y) : x < y\\
