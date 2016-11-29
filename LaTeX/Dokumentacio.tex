@@ -38,7 +38,7 @@
       IBM PC, exe futtatására alkalmas, 32-bites operációs rendszer (pl. Windows 10). Nem igényel egeret.
     \subsection{Használat}
       \subsubsection{A program indítása}
-        A program a \textbf{VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe} néven található a tömörített állományban. A \textbf{VY9NJN.exe} fájl kiválasztásával indítható.
+        A program a \textbf{.\textbackslash VY9NJN\textbackslash bin\textbackslash Release\textbackslash VY9NJN.exe} néven található a tömörített állományban. A \textbf{VY9NJN.exe} fájl kiválasztásával indítható.
       \subsubsection{A program bemenete}
         A program az adatokat a billentyűzetről olvassa be a következő sorrendben:
         \begin{table}[H]
@@ -130,16 +130,13 @@
       &\forall i \in \left [ 1 .. M \right ] : Min_i \in \left [ 0 .. 50 \right ]
     \end{align*}
     \begin{align*}
-      \mathbf{UF:}\, &\qquad T=\sum_{i=1}^{N}1 \, \wedge \\
-      &\exists j \in \left [ 1 .. M \right ] : P_{i,j}=Max \left ( P_{\left [ 1 .. N \right ], j} \right ) \\
-      \\
-      &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
+      \mathbf{UF:}\, & T=\sum_{i=1}^{N}1 \, \wedge \\
+      &\quad Db(i) \geqslant 1 \\      &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
       &\forall i \in \left [ 1 .. T \right ] : Db(Nyert_i) \geqslant 1 \, \wedge \\
       &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, `>` \, Nyert_{i+1}
     \end{align*}
     \begin{align*}
-      \mathbf{Def:}\, &Max(P_{X,y})=\left (k\mid \exists \ i\in X: k= P_{i,y} \wedge \forall \ i \in X: k \geqslant P_{i,y} \right ) , \\
-      &\qquad Db(x)=\sum_{j=1}^{M}1 ,  \\
+      \mathbf{Def:}\, &\quad Db(x)=\sum_{j=1}^{M}1   \\
       &P_{x,j}=Max\left(P_{\left [ 1..N \right ],j}\right) \\
       \\
       &x \, `>` \, y \Leftrightarrow \left\{
@@ -147,13 +144,14 @@
                   Db(x) \neq Db(y) : Db(x) > Db(y)\\
                   Db(x) = Db(y) : x < y\\
                 \end{array}
-              \right.
+              \right. \\
+      &Max(P_{X,y})=\left (k > 0\mid \exists \ i\in X: k= P_{i,y} \wedge \forall \ i \in X: k \geqslant P_{i,y} \right )
     \end{align*}
     \subsection{Fejlesztői környezet}
     IBM PC, exe futtatására alkalmas operációs rendszer (pl. Windows 10). \\
     mingw32-g++.exe c++ fordítóprogram (v4.9.2), Code::Blocks (v16.01) fejlesztői környezet.
     \subsection{Forráskód}
-    A teljes fejlesztői anyag –kicsomagolás után– az \textbf{VY9NJN} nevű könyvtárban található meg.
+    A teljes fejlesztői anyag –kicsomagolás után– a \textbf{ProgAlap_bead} nevű könyvtárban található meg.
     A fejlesztés során használt könyvtár-struktúra:
     \begin{table}[H]
       \centering
@@ -176,7 +174,7 @@
         \begin{center}
         \begin{tabular}{lcl}
           main.cpp & - & program, a forráskönyvtárban \\
-          iostream & -& képernyő-, és billentyűkezelés, a C++ rendszer része \\
+          iostream & - & képernyő-, és billentyűkezelés, a C++ rendszer része \\
         \end{tabular}
       \end{center}
       \subsubsection{Függvénystruktúra}
