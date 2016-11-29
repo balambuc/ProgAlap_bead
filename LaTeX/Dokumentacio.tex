@@ -97,7 +97,7 @@
         Az egyes bemeneti adatokat a fenti mintának megfelelően kell megadni.
         Hiba, ha a bármely bemenő adat nem egész szám, nem esik az adott intervallumba,
         vagy ha nem szám.
-        Hiba esetén a program azzal jelzi a hibát, hogy újrakérdezi az adott adatot.
+        Hiba esetén a program "HIBA!"-t jelez és újrakérdezi az adott adatot.
         \\
         \subparagraph{Mintafutás hibás bemeneti adatok esetén:}
 
@@ -131,16 +131,17 @@
     \end{align*}
     \begin{align*}
       \mathbf{UF:}\, &\qquad T=\sum_{i=1}^{N}1 \, \wedge \\
-      &\exists j \in \left [ 1 .. M \right ] : P_{i,j}=Max \left ( Matr_{\left [ 1 .. N \right ], j} \right ) \\
+      &\exists j \in \left [ 1 .. M \right ] : P_{i,j}=Max \left ( P_{\left [ 1 .. N \right ], j} \right ) \\
       \\
       &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
       &\forall i \in \left [ 1 .. T \right ] : Db(Nyert_i) \geqslant 1 \, \wedge \\
       &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, `>` \, Nyert_{i+1}
     \end{align*}
     \begin{align*}
-      \mathbf{Def:}\, &Max(Matr_{X,y})=\left (k\mid \exists \ i\in X: k= Matr_{i,y} \wedge \forall \ i \in X: k \geqslant Matr_{i,y} \right ) , \\
+      \mathbf{Def:}\, &Max(P_{X,y})=\left (k\mid \exists \ i\in X: k= P_{i,y} \wedge \forall \ i \in X: k \geqslant P_{i,y} \right ) , \\
       &\qquad Db(x)=\sum_{j=1}^{M}1 ,  \\
-      &P_{x,j}=Max\left(Matr_{\left [ 1..N \right ],j}\right) \\
+      &P_{x,j}=Max\left(P_{\left [ 1..N \right ],j}\right) \\
+      \\
       &x \, `>` \, y \Leftrightarrow \left\{
                 \begin{array}{ll}
                   Db(x) \neq Db(y) : Db(x) > Db(y)\\
