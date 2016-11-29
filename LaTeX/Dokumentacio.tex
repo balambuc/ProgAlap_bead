@@ -7,7 +7,28 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{float}
+\usepackage{color}
 \usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset
+{
+    language=C++,
+    backgroundcolor=\color{light-gray}
+    basicstyle=\linespread{1.1}\scriptsize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+    commentstyle=\color{mygreen},
+    keywordstyle=\color{blue},
+    stringstyle=\color{mymauve},
+}
 
 
 \title{”Programozási alapismeretek”\\ beadandó feladat:\\ ”ProgAlap beadandó” téma 1. feladat}
@@ -98,7 +119,6 @@
         Hiba, ha a bármely bemenő adat nem egész szám, nem esik az adott intervallumba,
         vagy ha nem szám.
         Hiba esetén a program "HIBA!"-t jelez és újrakérdezi az adott adatot.
-        \\
         \subparagraph{Mintafutás hibás bemeneti adatok esetén:}
 
 
@@ -131,7 +151,8 @@
     \end{align*}
     \begin{align*}
       \mathbf{UF:}\, & T=\sum_{i=1}^{N}1 \, \wedge \\
-      &\quad Db(i) \geqslant 1 \\      &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
+      &\quad Db(i) \geqslant 1 \\
+      &Nyert \subseteq \left [ 1 .. N \right ] \, \wedge \\
       &\forall i \in \left [ 1 .. T \right ] : Db(Nyert_i) \geqslant 1 \, \wedge \\
       &\forall i \in \left[ 1 .. (T-1) \right ] : Nyert_i \, `>` \, Nyert_{i+1}
     \end{align*}
@@ -151,7 +172,7 @@
     IBM PC, exe futtatására alkalmas operációs rendszer (pl. Windows 10). \\
     mingw32-g++.exe c++ fordítóprogram (v4.9.2), Code::Blocks (v16.01) fejlesztői környezet.
     \subsection{Forráskód}
-    A teljes fejlesztői anyag –kicsomagolás után– a \textbf{ProgAlap_bead} nevű könyvtárban található meg.
+    A teljes fejlesztői anyag –kicsomagolás után– a \textbf{ProgAlap\_bead} nevű könyvtárban található meg.
     A fejlesztés során használt könyvtár-struktúra:
     \begin{table}[H]
       \centering
@@ -180,6 +201,7 @@
       \subsubsection{Függvénystruktúra}
       \subsubsection{Algoritmus}
       \subsubsection{A kód}
+        \lstinputlisting[language=C]{../VY9NJN/main.cpp}
     \subsection{Tesztelés}
       \subsubsection{Érvényes tesztesetek}
       \subsubsection{Érvénytelen tesztesetek}
