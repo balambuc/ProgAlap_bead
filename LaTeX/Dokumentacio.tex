@@ -7,18 +7,21 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{float}
+\usepackage{tikz}
 \usepackage{color}
 \usepackage{listings}
+\usepackage{graphicx}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{light-gray}{gray}{0.95}
 
 \lstset
 {
     language=C++,
-    backgroundcolor=\color{light-gray}
-    basicstyle=\linespread{1.1}\scriptsize,
+    backgroundcolor=\color{light-gray},
+    basicstyle=\ttfamily\linespread{1.15}\footnotesize,
     numbers=left,
     stepnumber=1,
     showstringspaces=false,
@@ -30,11 +33,18 @@
     stringstyle=\color{mymauve},
 }
 
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{box} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+\tikzstyle{arrow} = [thin, -, >=stealth]
+
+\graphicspath{{./IMG/}}
 
 \title{”Programozási alapismeretek”\\ beadandó feladat:\\ ”ProgAlap beadandó” téma 1. feladat}
 \date{2016-11-31}
 \author{Készítette: Bárdosi Bence\\ Neptun-azonosító: VY9NJN\\ E-mail: bardosi.bence@gmail.com\\\\ Kurzuskód: IP-08PAEG\\ Gyakorlatvezető neve: Pap Gábor Sándorné}
+
 \renewcommand*\contentsname{Tartalom}
+\renewcommand*\figurename{}
 
 
 \begin{document}
@@ -111,15 +121,20 @@
       \subsubsection{A program kimenete}
         A program kiírja az egyéni versenyek győzteseinek rangsorát.
         A kimenet első sorába az egyéni győzelmet elért tanulók számát,
-        amelyet győztesek sorszáma követi, győzelmek száma szerint csökkenő,
+        amelyet a győztesek sorszáma követi, győzelmek száma szerint csökkenő,
         azon belül sorszám szerint növekvő sorrendben.
       \subsubsection{Minta bemenet és kimenet}
+        \includegraphics[width=\textwidth]{felhJo.PNG}
       \subsubsection{Hibalehetőségek}
         Az egyes bemeneti adatokat a fenti mintának megfelelően kell megadni.
         Hiba, ha a bármely bemenő adat nem egész szám, nem esik az adott intervallumba,
         vagy ha nem szám.
         Hiba esetén a program "HIBA!"-t jelez és újrakérdezi az adott adatot.
         \subparagraph{Mintafutás hibás bemeneti adatok esetén:}
+        \begin{center}
+          \includegraphics[width=\textwidth]{felhHibas.PNG}
+        \end{center}
+
 
 
   \newpage
@@ -185,11 +200,27 @@
         .\textbackslash VY9NJN\textbackslash main.cpp & C++ forráskód \\
         .\textbackslash LaTeX\textbackslash Dokumentacio.tex & Ezen dokumentáció LaTeX kódja \\
         .\textbackslash Dokumentacio.pdf & Ez a fájl \\
+        .\textbackslash minta\textbackslash & Mintabemeneteket tartalmazó könyvtár \\
         \bottomrule
       \end{tabular}
     \end{table}
     \subsection{Megoldás}
       \subsubsection{Programparaméterek}
+        \subparagraph{Konstans}
+        \begin{center}
+        \begin{tabular}{lcl}
+          MERET & : & \textbf{Egész} (100) [tanulók és versenyek maximális száma]  \\
+        \end{tabular}
+        \end{center}
+        \subparagraph{Változó}
+        \begin{center}
+        \begin{tabular}{lcl}
+          N & : & \textbf{Egész} \\
+          M & : & \textbf{Egész} \\
+          Min & : & M hosszú \textbf{vektor} \\
+          P & : & NxM méretű \textbf{mátrix} \\
+        \end{tabular}
+        \end{center}
       \subsubsection{Programfelépítés}
         \subparagraph{A program által használt modulok (és helyük):}
         \begin{center}
@@ -197,8 +228,21 @@
           main.cpp & - & program, a forráskönyvtárban \\
           iostream & - & képernyő-, és billentyűkezelés, a C++ rendszer része \\
         \end{tabular}
-      \end{center}
+        \end{center}
       \subsubsection{Függvénystruktúra}
+        \begin{tikzpicture}[node distance=2cm]
+          \node (mego) [box] {megold};
+          \node (fo) [box, above of=mego] {Főprogram};
+          \node (beolv) [box, left of=mego, xshift=-2cm] {beolvas};
+          \node (kiir) [box, right of=mego, xshift=2cm] {kiir};
+          \node (db) [box, below of=mego] {Db};
+          \node (max) [box, below of=db] {Max};
+          \draw [arrow] (fo) -- (mego);
+          \draw [arrow] (fo) -- (beolv);
+          \draw [arrow] (fo) -- (kiir);
+          \draw [arrow] (mego) -- (db);
+          \draw [arrow] (db) -- (max);
+        \end{tikzpicture}
       \subsubsection{Algoritmus}
       \subsubsection{A kód}
         \lstinputlisting[language=C]{../VY9NJN/main.cpp}

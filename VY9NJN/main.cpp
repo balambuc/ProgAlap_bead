@@ -49,13 +49,15 @@ void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET])
 
     } while(hiba);
 
+
     do {
         hiba=false;
         cerr << "A " << M << " verseny minimum ponthatarai (Mi) szokozzel elvalasztva (Mi=[0..50]):";
         for(int i=0; i<M; i++) {
             cin >> Min[i];
-            hiba=hiba || (Min[i]<0 || Min[i]>50) || cin.fail() || (cin.peek()!= '\n');
+            hiba=hiba || (Min[i]<0 || Min[i]>50) || cin.fail() || ((cin.peek()!= '\n') && cin.peek()!=' ');
         }
+
         if(hiba) {
             cerr << "HIBA!" << endl;
             cin.clear();
@@ -74,9 +76,9 @@ void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET])
             cin >> s;
             for(int j=0; j<s; j++) {
                 cin >> si;
-                hiba = hiba || si<1 || si>N || cin.fail() || (cin.peek()!= '\n');
+                hiba = hiba || si<1 || si>N || cin.fail() || ((cin.peek()!= '\n') && cin.peek()!=' ');
                 cin >> P[si-1][i];
-                hiba = hiba || P[si-1][i]<0 || P[si-1][i]>100 || cin.fail() || (cin.peek()!= '\n');
+                hiba = hiba || P[si-1][i]<0 || P[si-1][i]>100 || cin.fail() || ((cin.peek()!= '\n') && cin.peek()!=' ');
                 if(P[si-1][i]<Min[i])
                     P[si-1][i]=0;
             }
