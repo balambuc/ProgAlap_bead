@@ -5,9 +5,9 @@ using namespace std;
 #define MERET 100
 
 void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET]);
-void megold(int N, int M, int &T, int P[MERET][MERET], int Nyert[MERET], int db[MERET]);
+void megold(int N, int M, int &T,int Min[MERET], int P[MERET][MERET], int Nyert[MERET], int db[MERET]);
 int Max(int j, int N, int P[MERET][MERET]);
-int Db(int i, int N, int M, int P[MERET][MERET], int db[MERET]);
+int Db(int i, int N, int M, int Min[MERET], int P[MERET][MERET], int db[MERET]);
 void kiir(int T, int Gyozt[MERET]);
 
 int main()
@@ -25,7 +25,7 @@ int main()
     for(int i=0; i<N; i++)
         db[i]=-1;
 
-    megold(N, M, T, P, Nyert, db);
+    megold(N, M, T, Min, P, Nyert, db);
     kiir(T, Nyert);
 
     return 0;
@@ -79,8 +79,7 @@ void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET])
                 hiba = hiba || si<1 || si>N || cin.fail() || ((cin.peek()!= '\n') && cin.peek()!=' ');
                 cin >> P[si-1][i];
                 hiba = hiba || P[si-1][i]<0 || P[si-1][i]>100 || cin.fail() || ((cin.peek()!= '\n') && cin.peek()!=' ');
-                if(P[si-1][i]<Min[i])
-                    P[si-1][i]=0;
+
             }
             if(hiba) {
                 cerr << "HIBA!" << endl;
@@ -91,12 +90,12 @@ void beolvas(int &N, int &M, int Min[MERET], int P[MERET][MERET])
     }
 }
 
-void megold(int N, int M, int &T, int P[MERET][MERET], int Nyert[MERET], int db[MERET])
+void megold(int N, int M, int &T,int Min[MERET], int P[MERET][MERET], int Nyert[MERET], int db[MERET])
 {
     //megszamolas
     T=0;
     for(int i=0; i<N; i++)
-        if(Db(i,N,M,P,db)>=1)
+        if(Db(i,N,M,Min,P,db)>=1)
             T++;
 
     //Nyert vektor inic
@@ -126,13 +125,13 @@ int Max(int j, int N, int P[MERET][MERET])
     return s;
 }
 
-int Db(int i, int N, int M, int P[MERET][MERET], int db[MERET])
+int Db(int i, int N, int M, int Min[MERET], int P[MERET][MERET], int db[MERET])
 {
     if(db[i]!=-1)
         return db[i];
     int s=0;
     for(int j=0; j<M; j++)
-        if(P[i][j]==Max(j, N, P) && P[i][j]!=0)
+        if(P[i][j]==Max(j, N, P) && P[i][j]>=Min[j])
             s++;
     db[i]=s;
     return s;
